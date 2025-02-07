@@ -1,0 +1,52 @@
+﻿@model CollegeApp.Models.Student
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <form method="post" action="@Url.Action("AddStudent", "Student")" enctype="multipart/form-data" class="w-50 mx-auto p-4 border rounded shadow">
+
+        @* <form method="post" action="AddStudent" enctype="multipart/form-data" class="w-50 mx-auto p-4 border rounded shadow"> *@
+            <h2 class="text-center mb-4">Student</h2>
+            <div class="mb-3">
+                <label for="FirstName" class="form-label">First name :</label>
+                <input type="text" id="FirstName" name="FirstName" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="LastName" class="form-label">Last name :</label>
+                <input type="text" id="LastName" name="LastName" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="Gender" class="form-label">Gender :</label>
+                <input type="text" id="Gender" name="Gender" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="Birthdate" class="form-label">Birth date :</label>
+                <input type="text" id="Birthdate" name="Birthdate" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email :</label>
+                <input type="email" id="Email" name="Email" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="Phone" class="form-label">Phone No. :</label>
+                <input type="text" id="Phone" name="Phone" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="Address" class="form-label">Address :</label>
+                <input type="text" id="Address" name="Address" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary w-100">Add</button>
+                
+            </div>
+            <div class="mb-3">
+                
+                <button type="reset" class="btn btn-primary w-100">Clear</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
